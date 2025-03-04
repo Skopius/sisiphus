@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn8ypqjyueacx"]
+
+[ext_resource type="Script" path="res://scripts/marisa.gd" id="1_vqs3m"]
+[ext_resource type="Texture2D" uid="uid://dxnrg5hxf458c" path="res://assets/Без имени-8.png" id="1_wrtvb"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p8fs4"]
+radius = 315.885
+height = 898.671
+
+[node name="marisa" type="CharacterBody2D"]
+script = ExtResource("1_vqs3m")
+
+[node name="БезИмени-8" type="Sprite2D" parent="."]
+position = Vector2(524.75, 281.75)
+scale = Vector2(0.367222, 0.376111)
+texture = ExtResource("1_wrtvb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(527, 287)
+scale = Vector2(0.367222, 0.376111)
+shape = SubResource("CapsuleShape2D_p8fs4")
+one_way_collision = true
+
+[node name="die" type="AudioStreamPlayer" parent="."]

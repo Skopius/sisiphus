@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ct3b4vqisis01"]
+
+[node name="text" type="CanvasLayer"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 28.0
+offset_top = 32.0
+offset_right = 360.0
+offset_bottom = 107.0
+text = "412421"

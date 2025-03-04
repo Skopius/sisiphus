@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://f6qjt4xt0qtb"]
+
+[ext_resource type="Texture2D" uid="uid://dh7r2bq11aypi" path="res://Без имени-8.png" id="1_rvjrf"]
+[ext_resource type="PackedScene" uid="uid://cod30derb1vbg" path="res://scenes/ballff.tscn" id="3_2af6y"]
+[ext_resource type="PackedScene" uid="uid://1mqaoe1005rr" path="res://scenes/wall collision.tscn" id="3_vitjs"]
+[ext_resource type="PackedScene" uid="uid://bn8ypqjyueacx" path="res://scenes/marisa.tscn" id="4_f7p0i"]
+
+[node name="game" type="Node2D"]
+
+[node name="БезИмени-8" type="Sprite2D" parent="."]
+position = Vector2(579.5, 324.5)
+scale = Vector2(0.891549, 0.908451)
+texture = ExtResource("1_rvjrf")
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_vitjs")]
+position = Vector2(227, -10)
+
+[node name="StaticBody2D" parent="StaticBody2D" instance=ExtResource("3_vitjs")]
+position = Vector2(2, 668)
+
+[node name="StaticBody2D" parent="StaticBody2D/StaticBody2D" instance=ExtResource("3_vitjs")]
+position = Vector2(23, -678)
+rotation = 1.5708
+
+[node name="StaticBody2D" parent="StaticBody2D/StaticBody2D/StaticBody2D" instance=ExtResource("3_vitjs")]
+position = Vector2(4.99997, -655)
+
+[node name="ball" parent="." instance=ExtResource("3_2af6y")]
+position = Vector2(557, 363)
+scale = Vector2(0.1, 0.1)
+
+[node name="marisa" parent="." instance=ExtResource("4_f7p0i")]
+position = Vector2(191, 11)
+scale = Vector2(0.32, 0.32)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 22.0
+offset_right = 142.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 30
+text = "deaths: "

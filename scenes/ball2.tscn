@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3hg8oj88xfv1"]
+
+[ext_resource type="Script" path="res://scripts/ball_2.gd" id="1_1f88g"]
+[ext_resource type="Texture2D" uid="uid://7hv1dk5rc2ig" path="res://assets/kuybey.png" id="2_1r85i"]
+[ext_resource type="AudioStream" uid="uid://bjxdu5h3i1j5" path="res://assets/Sound 1(1).ogg" id="2_ji7we"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t652i"]
+radius = 344.176
+
+[node name="ball" type="CharacterBody2D"]
+position = Vector2(34, -37)
+script = ExtResource("1_1f88g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Kuybey" type="Sprite2D" parent="Sprite2D"]
+texture_filter = 1
+position = Vector2(-26, 4)
+scale = Vector2(21.2168, 21.2168)
+texture = ExtResource("2_1r85i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-35, 37)
+shape = SubResource("CircleShape2D_t652i")
+debug_color = Color(0.887366, 0.275378, 0.469136, 0.42)
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ji7we")
+volume_db = 15.0

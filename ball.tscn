@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvks0fa45li7k"]
+
+[ext_resource type="PackedScene" uid="uid://dfktxbp303tuk" path="res://scenes/ball.tscn" id="1_y88gr"]
+[ext_resource type="Script" path="res://scripts/ball.gd" id="2_tafnr"]
+
+[node name="ball" instance=ExtResource("1_y88gr")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(439, 348)
+script = ExtResource("2_tafnr")

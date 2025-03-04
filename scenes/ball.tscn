@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfktxbp303tuk"]
+
+[ext_resource type="Script" path="res://scripts/ball.gd" id="1_8errx"]
+[ext_resource type="AudioStream" uid="uid://bjxdu5h3i1j5" path="res://assets/Sound 1(1).ogg" id="3_vvijp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t652i"]
+radius = 344.176
+
+[node name="ball" type="CharacterBody2D"]
+position = Vector2(34, -37)
+script = ExtResource("1_8errx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-35, 37)
+shape = SubResource("CircleShape2D_t652i")
+debug_color = Color(0.887366, 0.275378, 0.469136, 0.42)
+
+[node name="hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_vvijp")
+volume_db = 15.0

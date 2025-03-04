@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://it1ymtuqawsu"]
+
+[ext_resource type="PackedScene" uid="uid://dfktxbp303tuk" path="res://scenes/ball.tscn" id="1_ho1qr"]
+[ext_resource type="PackedScene" uid="uid://b3hg8oj88xfv1" path="res://scenes/ball2.tscn" id="2_bs4n8"]
+[ext_resource type="PackedScene" uid="uid://b4jhpwv16xyc" path="res://scenes/walls.tscn" id="2_ka8ff"]
+
+[node name="balls" type="Node2D"]
+
+[node name="ball" parent="." instance=ExtResource("1_ho1qr")]
+position = Vector2(558, 321)
+scale = Vector2(0.1, 0.1)
+
+[node name="Label" type="Label" parent="ball"]
+offset_left = -230.0
+offset_top = -650.0
+offset_right = 1597.0
+offset_bottom = -377.0
+theme_override_font_sizes/font_size = 200
+text = "333"
+
+[node name="ball2" parent="." instance=ExtResource("1_ho1qr")]
+visible = false
+position = Vector2(250, 101)
+scale = Vector2(0.1, 0.1)
+
+[node name="Label" type="Label" parent="ball2"]
+offset_left = -240.0
+offset_top = -660.0
+offset_right = 1587.0
+offset_bottom = -387.0
+theme_override_font_sizes/font_size = 200
+text = "333"
+
+[node name="ball3" parent="." instance=ExtResource("1_ho1qr")]
+visible = false
+position = Vector2(876, 236)
+scale = Vector2(0.1, 0.1)
+
+[node name="Label" type="Label" parent="ball3"]
+offset_left = -260.0
+offset_top = -730.0
+offset_right = 1567.0
+offset_bottom = -457.0
+theme_override_font_sizes/font_size = 200
+text = "333"
+
+[node name="qbey" parent="." instance=ExtResource("2_bs4n8")]
+visible = false
+position = Vector2(131, 323)
+scale = Vector2(0.1, 0.1)
+
+[node name="Label" type="Label" parent="qbey"]
+offset_left = -180.0
+offset_top = -890.0
+offset_right = 1647.0
+offset_bottom = -617.0
+theme_override_font_sizes/font_size = 200
+text = "333"
+
+[node name="walls" parent="." instance=ExtResource("2_ka8ff")]
+scale = Vector2(4, 1.6)
+
+[node name="walls2" parent="." instance=ExtResource("2_ka8ff")]
+position = Vector2(1152, -527)
+rotation = 1.5708
+scale = Vector2(4, 1.6)
+
+[node name="walls3" parent="." instance=ExtResource("2_ka8ff")]
+position = Vector2(-69, -334)
+rotation = 1.5708
+scale = Vector2(4, 1.6)
+
+[node name="walls4" parent="." instance=ExtResource("2_ka8ff")]
+position = Vector2(-4, 717)
+scale = Vector2(4, 1.6)
+
+[node name="walls5" parent="." instance=ExtResource("2_ka8ff")]
+position = Vector2(242, 235)
+scale = Vector2(2, 0.7)
+
+[node name="walls6" parent="." instance=ExtResource("2_ka8ff")]
+position = Vector2(249, 483)
+scale = Vector2(2, 0.7)
