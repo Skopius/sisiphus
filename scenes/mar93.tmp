@@ -11,7 +11,6 @@ var collisionCount = 0
 @onready var die: AudioStreamPlayer = $die
 
 
-func _physics_process(delta):
 func _on_area_entered()
 		die.play()
 		
@@ -29,9 +28,11 @@ position = Vector2(524.75, 281.75)
 scale = Vector2(0.367222, 0.376111)
 texture = ExtResource("1_wrtvb")
 
+[node name="die" type="AudioStreamPlayer" parent="."]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(527, 287)
 scale = Vector2(0.367222, 0.376111)
 shape = SubResource("CapsuleShape2D_p8fs4")
 
-[node name="die" type="AudioStreamPlayer" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
